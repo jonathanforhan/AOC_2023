@@ -132,12 +132,12 @@ int main(void) {
     char *buf = NULL;
     ssize_t len;
 
-    len = import("../input.txt", NULL);
+    len = import("input.txt", NULL);
     assert(len > 0);
     buf = calloc(len + 1, sizeof(char));
     assert(buf);
 
-    import("../input.txt", buf);
+    import("input.txt", buf);
 
     uint32_t sum = sum_document_part_one(buf);
     printf("Part 1 sum: %d\n", sum);
